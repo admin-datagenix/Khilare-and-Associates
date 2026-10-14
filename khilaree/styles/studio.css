@@ -1,0 +1,693 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+/* ==========================================================================
+   KHILARE & ASSOCIATES — STUDIO PAGE STYLING
+   Architectural editorial design system:
+   Deep Teal (#103D3B), Warm Cream (#F8F5EE), Maroon (#7E1738), Gold (#D6A15D)
+   ========================================================================== */
+
+:root {
+  --studio-teal: #103d3b;
+  --studio-teal-dark: #0b2827;
+  --studio-charcoal: #171d1c;
+  --studio-cream: #f8f5ee;
+  --studio-cream-card: #ffffff;
+  --studio-maroon: #7e1738;
+  --studio-gold: #d6a15d;
+  --studio-gold-light: #e5b967;
+  --studio-ink: #231b17;
+  --studio-muted: #5e524b;
+  --studio-border: rgba(126, 23, 56, 0.1);
+  --studio-border-warm: #e8e0d5;
+}
+
+#intro,
+#principles,
+#vision,
+#services {
+  scroll-margin-top: 130px;
+}
+
+/* ==========================================================================
+   EDITORIAL SECTION NAVIGATION STRIP
+   Links the 4 dropdown topics across the Studio page
+   ========================================================================== */
+
+.studio-nav-strip {
+  position: sticky;
+  top: 70px;
+  z-index: 900;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(126, 23, 56, 0.1);
+  box-shadow: 0 4px 20px rgba(16, 61, 59, 0.04);
+  transition: all 0.3s ease;
+}
+
+.studio-nav-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.studio-nav-inner::-webkit-scrollbar {
+  display: none;
+}
+
+.studio-nav-links {
+  display: flex;
+  align-items: center;
+  gap: clamp(16px, 2.8vw, 36px);
+  flex-shrink: 0;
+}
+
+.studio-nav-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--studio-ink);
+  text-decoration: none;
+  white-space: nowrap;
+  padding: 6px 0;
+  position: relative;
+  transition: color 0.25s ease;
+}
+
+.studio-nav-item small {
+  color: var(--studio-gold);
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.studio-nav-item:hover {
+  color: var(--studio-maroon);
+}
+
+.studio-nav-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--studio-maroon);
+  transition: width 0.25s ease;
+}
+
+.studio-nav-item:hover::after,
+.studio-nav-item.active::after {
+  width: 100%;
+}
+
+.studio-nav-companion {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.studio-nav-companion a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--studio-maroon);
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: 1px solid rgba(126, 23, 56, 0.2);
+  transition: all 0.25s ease;
+}
+
+.studio-nav-companion a:hover {
+  background: var(--studio-maroon);
+  color: #ffffff;
+  border-color: var(--studio-maroon);
+}
+
+/* ==========================================================================
+   REBUILT INTRODUCTION SECTION
+   Two-column editorial hierarchy + 4 Compact Highlights
+   ========================================================================== */
+
+.studio-intro-section {
+  background: #ffffff;
+  padding: clamp(70px, 9vw, 110px) 0 clamp(60px, 8vw, 95px);
+  position: relative;
+}
+
+.studio-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: clamp(40px, 6vw, 90px);
+  align-items: start;
+}
+
+.studio-intro-left {
+  position: sticky;
+  top: 140px;
+}
+
+.studio-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--studio-maroon);
+  margin-bottom: 12px;
+}
+
+.studio-label::before {
+  content: "";
+  width: 20px;
+  height: 2px;
+  background: var(--studio-gold);
+  display: inline-block;
+}
+
+.studio-intro-title {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(34px, 4.2vw, 54px);
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--studio-ink);
+  margin: 10px 0 20px;
+  font-weight: 700 !important;
+}
+
+.studio-intro-title span {
+  color: var(--studio-maroon);
+}
+
+.studio-intro-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--studio-muted);
+  background: #fbf7f0;
+  border: 1px solid rgba(214, 161, 93, 0.35);
+  padding: 6px 14px;
+  border-radius: 4px;
+  margin-top: 8px;
+}
+
+.studio-intro-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.studio-lead-copy {
+  font-size: clamp(17px, 1.3vw, 20px);
+  line-height: 1.75;
+  color: var(--studio-ink);
+  font-weight: 500;
+  margin: 0;
+  position: relative;
+  padding-left: 20px;
+  border-left: 3px solid var(--studio-gold);
+}
+
+.studio-sub-copy {
+  font-size: 16px;
+  line-height: 1.8;
+  color: var(--studio-muted);
+  margin: 0;
+}
+
+/* Compact Editorial Highlights */
+
+.studio-highlights-wrap {
+  margin-top: clamp(45px, 6vw, 70px);
+  padding-top: clamp(35px, 5vw, 55px);
+  border-top: 1px solid var(--studio-border-warm);
+}
+
+.studio-highlights-header {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--studio-maroon);
+  margin-bottom: 24px;
+}
+
+.studio-highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.studio-highlight-card {
+  background: var(--studio-cream);
+  border: 1px solid var(--studio-border-warm);
+  border-radius: 8px;
+  padding: 24px 20px;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.studio-highlight-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28px;
+  height: 3px;
+  background: var(--studio-gold);
+  transition: width 0.3s ease, background 0.3s ease;
+}
+
+.studio-highlight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(126, 23, 56, 0.3);
+  box-shadow: 0 14px 30px rgba(16, 61, 59, 0.08);
+}
+
+.studio-highlight-card:hover::before {
+  width: 100%;
+  background: var(--studio-maroon);
+}
+
+.highlight-num {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--studio-gold);
+  line-height: 1;
+  margin-bottom: 12px;
+}
+
+.studio-highlight-card h3 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 16px;
+  font-weight: 700 !important;
+  color: var(--studio-ink);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.studio-highlight-card p {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--studio-muted);
+  margin: 0;
+}
+
+/* ==========================================================================
+   FOUR CORE PRINCIPLES SECTION
+   2x2 Editorial Grid or 4 Columns with numbered labels
+   ========================================================================== */
+
+.studio-principles-section {
+  background: var(--studio-cream);
+  padding: clamp(75px, 9vw, 115px) 0;
+  position: relative;
+  border-top: 1px solid var(--studio-border-warm);
+}
+
+.principles-head {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto clamp(40px, 5vw, 60px);
+}
+
+.principles-head .studio-label {
+  justify-content: center;
+}
+
+.principles-head h2 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(32px, 4vw, 50px);
+  line-height: 1.1;
+  color: var(--studio-ink);
+  margin: 8px 0 14px;
+  font-weight: 700 !important;
+}
+
+.principles-head p {
+  font-size: 16.5px;
+  line-height: 1.75;
+  color: var(--studio-muted);
+  margin: 0;
+}
+
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.principle-card {
+  background: #ffffff;
+  border: 1px solid var(--studio-border-warm);
+  border-radius: 10px;
+  padding: clamp(28px, 4vw, 38px);
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.principle-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: var(--studio-maroon);
+  transition: width 0.35s ease;
+}
+
+.principle-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(126, 23, 56, 0.25);
+  box-shadow: 0 16px 36px rgba(16, 61, 59, 0.08);
+}
+
+.principle-card:hover::before {
+  width: 100%;
+}
+
+.principle-num {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--studio-gold);
+  line-height: 1;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.principle-tag {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--studio-muted);
+  background: #fbf7f0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(214, 161, 93, 0.3);
+}
+
+.principle-card h3 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(20px, 2.2vw, 24px);
+  line-height: 1.25;
+  color: var(--studio-ink);
+  margin: 0 0 12px;
+  font-weight: 700 !important;
+}
+
+.principle-card p {
+  font-size: 15px;
+  line-height: 1.75;
+  color: var(--studio-muted);
+  margin: 0;
+  flex-grow: 1;
+}
+
+/* ==========================================================================
+   REDESIGNED VISION SECTION
+   Deep Teal Background, Architectural Image + Vision Statement
+   ========================================================================== */
+
+.studio-vision-section {
+  background: var(--studio-teal);
+  color: #ffffff;
+  padding: clamp(80px, 10vw, 130px) 0;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background vignette */
+.studio-vision-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse at 80% 20%, rgba(214, 161, 93, 0.08) 0%, transparent 60%),
+    linear-gradient(180deg, rgba(11, 40, 39, 0.4) 0%, rgba(16, 61, 59, 0.95) 100%);
+  pointer-events: none;
+}
+
+.vision-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(40px, 6vw, 85px);
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.vision-image-wrap {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.vision-image-wrap img {
+  width: 100%;
+  height: clamp(380px, 45vw, 500px);
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.vision-image-wrap:hover img {
+  transform: scale(1.03);
+}
+
+.vision-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(0deg, rgba(11, 40, 39, 0.95) 0%, transparent 100%);
+  padding: 24px 20px 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #e5b967;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.vision-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.vision-eyebrow {
+  color: var(--studio-gold-light);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.vision-eyebrow::before {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: var(--studio-gold-light);
+  display: inline-block;
+}
+
+.vision-content h2 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(34px, 4.4vw, 56px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: #f7f4ee;
+  margin: 0;
+  font-weight: 700 !important;
+}
+
+.vision-quote {
+  font-size: clamp(17px, 1.35vw, 21px);
+  line-height: 1.7;
+  color: #f5ede0;
+  margin: 0;
+  font-weight: 400;
+  padding-left: 20px;
+  border-left: 2px solid var(--studio-gold);
+}
+
+.vision-supporting {
+  font-size: 15.5px;
+  line-height: 1.8;
+  color: #c9d8d5;
+  margin: 0;
+}
+
+.vision-signature-block {
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.vision-signature-block .brand {
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  color: #ffffff;
+}
+
+.vision-signature-block .sub {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: var(--studio-gold-light);
+  text-transform: uppercase;
+}
+
+/* ==========================================================================
+   SERVICES SECTION POLISH & LINK
+   ========================================================================== */
+
+.studio-services-footer-bridge {
+  text-align: center;
+  margin-top: 45px;
+  padding-top: 30px;
+  border-top: 1px solid var(--studio-border-warm);
+}
+
+.studio-services-footer-bridge a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--studio-maroon);
+  padding: 13px 26px;
+  border: 1px solid rgba(126, 23, 56, 0.25);
+  border-radius: 6px;
+  background: #ffffff;
+  transition: all 0.25s ease;
+}
+
+.studio-services-footer-bridge a:hover {
+  background: var(--studio-maroon);
+  color: #ffffff;
+  border-color: var(--studio-maroon);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(126, 23, 56, 0.2);
+}
+
+/* ==========================================================================
+   RESPONSIVE DESIGN BREAKPOINTS
+   1440px / 1366px (Desktop), 1024px / 768px (Tablet), 390px / 360px (Mobile)
+   ========================================================================== */
+
+@media (max-width: 1080px) {
+  .studio-highlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+@media (max-width: 880px) {
+  .studio-intro-grid,
+  .vision-grid {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  .studio-intro-left {
+    position: static;
+  }
+
+  .principles-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .vision-image-wrap img {
+    height: 320px;
+  }
+
+  .studio-nav-companion {
+    display: none;
+  }
+}
+
+@media (max-width: 600px) {
+  .studio-nav-strip {
+    top: 68px;
+  }
+
+  .studio-highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .studio-highlight-card {
+    padding: 20px 18px;
+  }
+
+  .principle-card {
+    padding: 24px 20px;
+  }
+
+  .vision-image-wrap img {
+    height: 260px;
+  }
+
+  .studio-intro-section,
+  .studio-principles-section,
+  .studio-vision-section {
+    padding: 55px 0;
+  }
+}
+
+@media (max-width: 390px) {
+  .studio-intro-title {
+    font-size: 30px;
+  }
+
+  .vision-content h2 {
+    font-size: 30px;
+  }
+
+  .principles-head h2 {
+    font-size: 28px;
+  }
+}

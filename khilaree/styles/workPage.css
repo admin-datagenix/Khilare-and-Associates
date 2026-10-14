@@ -1,0 +1,252 @@
+/* =========================================================
+   WORK / PROJECTS PAGE
+========================================================= */
+
+.work-page {
+  padding: 90px 0 110px;
+  background: #f4f0e9;
+}
+
+/* =========================================================
+   EXTRA PROJECT HEADING
+========================================================= */
+
+.work-page-heading {
+  text-align: center;
+  max-width: 850px;
+  margin: 0 auto 55px;
+}
+
+.work-page-heading .eyebrow {
+  margin-bottom: 12px;
+  color: var(--maroon);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.work-page-heading h2 {
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(40px, 5vw, 64px);
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  color: #292323;
+}
+
+.work-page-heading h2 span {
+  color: var(--primary);
+}
+
+.work-page-heading p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+/* =========================================================
+   PROJECT GRID
+========================================================= */
+
+.wp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+/* =========================================================
+   PROJECT CARD
+========================================================= */
+
+.wp-card {
+  background: #fff;
+  border: 1px solid var(--line);
+  overflow: hidden;
+  position: relative;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.wp-image-wrap {
+  width: 100%;
+  height: 360px;
+  overflow: hidden;
+  background: #eee8df;
+}
+
+.wp-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.7s ease;
+}
+
+.wp-card:hover img {
+  transform: scale(1.04);
+}
+
+/* =========================================================
+   CARD CONTENT
+========================================================= */
+
+.wp-card-content {
+  position: relative;
+  padding: 25px;
+  min-height: 145px;
+}
+
+.wp-card-content > span {
+  color: var(--maroon);
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+.wp-card-content h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 9px 45px 7px 0;
+  color: #292323;
+}
+
+.wp-card-content p {
+  margin: 0;
+  padding-right: 45px;
+  font-size: 12px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.wp-arrow {
+  position: absolute;
+  right: 25px;
+  bottom: 25px;
+  color: var(--maroon);
+  font-size: 22px;
+  transition: 0.3s ease;
+}
+
+.wp-card:hover .wp-arrow {
+  transform: translate(4px, -4px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+  .work-page {
+    padding: 70px 0 90px;
+  }
+
+  .work-page-heading {
+    margin-bottom: 40px;
+  }
+
+  .wp-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+  }
+
+  .wp-image-wrap {
+    height: 300px;
+  }
+
+  .wp-card-content {
+    padding: 22px;
+  }
+
+  .wp-card-content h2 {
+    font-size: 22px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 700px) {
+  .work-page {
+    padding: 55px 0 70px;
+  }
+
+  .work-page-heading {
+    margin-bottom: 32px;
+    padding: 0 8px;
+  }
+
+  .work-page-heading h2 {
+    font-size: 40px;
+    line-height: 1.08;
+  }
+
+  .work-page-heading p {
+    font-size: 14px;
+    line-height: 1.65;
+    margin-top: 15px;
+  }
+
+  .wp-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .wp-image-wrap {
+    height: 280px;
+  }
+
+  .wp-card-content {
+    padding: 22px;
+    min-height: 135px;
+  }
+
+  .wp-card-content h2 {
+    font-size: 23px;
+    margin-top: 8px;
+  }
+
+  .wp-card-content p {
+    font-size: 12px;
+  }
+
+  .wp-arrow {
+    right: 22px;
+    bottom: 22px;
+  }
+}
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 420px) {
+  .work-page {
+    padding-top: 45px;
+  }
+
+  .work-page-heading h2 {
+    font-size: 34px;
+  }
+
+  .wp-image-wrap {
+    height: 240px;
+  }
+
+  .wp-card-content h2 {
+    font-size: 21px;
+  }
+}

@@ -1,0 +1,310 @@
+/* =========================================
+   HOMEPAGE SLIDING MARQUEE STRIP
+========================================= */
+
+.marquee-strip {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #5A3825;
+
+  color: #F8EBD8;
+
+  border-top: 1px solid rgba(255, 224, 180, 0.25);
+  border-bottom: 1px solid rgba(255, 224, 180, 0.25);
+
+  white-space: nowrap;
+
+  box-shadow:
+    0 8px 25px rgba(55, 32, 20, 0.16);
+
+  isolation: isolate;
+}
+
+
+/* =========================================
+   SOFT LIGHT EFFECT
+========================================= */
+
+.marquee-strip::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.08),
+      transparent 18%,
+      transparent 82%,
+      rgba(255, 255, 255, 0.08)
+    );
+
+  pointer-events: none;
+
+  z-index: 1;
+}
+
+
+/* =========================================
+   MOVING TRACK
+========================================= */
+
+.marquee-track {
+  display: flex;
+
+  align-items: center;
+
+  width: max-content;
+
+  animation: marquee 26s linear infinite;
+
+  will-change: transform;
+
+  position: relative;
+
+  z-index: 2;
+}
+
+
+/* =========================================
+   MARQUEE TEXT
+========================================= */
+
+.marquee-track span {
+  display: flex;
+
+  align-items: center;
+
+  gap: 28px;
+
+  padding: 16px 34px;
+
+  font-size: 11px;
+
+  line-height: 1;
+
+  letter-spacing: 0.16em;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+
+  color: #F8EBD8;
+
+  text-shadow:
+    0 1px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================================
+   GOLD DOT / SEPARATOR
+========================================= */
+
+.marquee-track b {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 7px;
+
+  height: 7px;
+
+  padding: 0;
+
+  margin: 0;
+
+  font-size: 0;
+
+  line-height: 0;
+
+  background: #D6A85F;
+
+  border-radius: 50%;
+
+  box-shadow:
+    0 0 10px rgba(214, 168, 95, 0.55);
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   GOLD LINE
+========================================= */
+
+.marquee-track span::after {
+  content: "";
+
+  display: block;
+
+  width: 32px;
+
+  height: 1px;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      #D6A85F,
+      transparent
+    );
+
+  opacity: 0.75;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   MARQUEE ANIMATION
+========================================= */
+
+@keyframes marquee {
+
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* =========================================
+   HOVER = PAUSE
+========================================= */
+
+.marquee-strip:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .marquee-track {
+    animation-duration: 24s;
+  }
+
+  .marquee-track span {
+    gap: 24px;
+
+    padding: 15px 28px;
+
+    font-size: 10px;
+
+    letter-spacing: 0.14em;
+  }
+
+  .marquee-track span::after {
+    width: 25px;
+  }
+
+  .marquee-track b {
+    width: 6px;
+
+    height: 6px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .marquee-strip {
+    border-top: 1px solid rgba(255, 224, 180, 0.20);
+
+    border-bottom: 1px solid rgba(255, 224, 180, 0.20);
+  }
+
+  .marquee-track {
+    animation-duration: 21s;
+  }
+
+  .marquee-track span {
+    gap: 18px;
+
+    padding: 13px 22px;
+
+    font-size: 8px;
+
+    letter-spacing: 0.11em;
+  }
+
+  .marquee-track span::after {
+    width: 20px;
+  }
+
+  .marquee-track b {
+    width: 5px;
+
+    height: 5px;
+
+    box-shadow:
+      0 0 7px rgba(214, 168, 95, 0.50);
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .marquee-track {
+    animation-duration: 19s;
+  }
+
+  .marquee-track span {
+    gap: 15px;
+
+    padding: 12px 18px;
+
+    font-size: 7px;
+
+    letter-spacing: 0.10em;
+  }
+
+  .marquee-track span::after {
+    width: 16px;
+  }
+
+  .marquee-track b {
+    width: 4px;
+
+    height: 4px;
+  }
+}
+
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .marquee-track {
+    animation: none;
+    transform: none;
+  }
+
+  .marquee-strip:hover .marquee-track {
+    animation-play-state: running;
+  }
+}

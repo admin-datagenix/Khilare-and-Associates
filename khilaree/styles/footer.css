@@ -1,0 +1,559 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap");
+
+/* =========================================
+   FOOTER CTA
+========================================= */
+
+.footer-cta {
+  background: #f0ece3;
+}
+
+.footer-cta-inner {
+  min-height: 160px;
+  padding: 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-cta h2 {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 700 !important;
+  font-size: clamp(30px, 3.5vw, 46px);
+  margin: 7px 0;
+  line-height: 1.15;
+  color: #231b17;
+  letter-spacing: -0.02em;
+}
+
+.footer-cta p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-main {
+  background: #211b1a;
+  color: #e5ded7;
+  padding: 34px 0 16px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1.15fr 1.4fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* =========================================
+   BRAND LOGO
+========================================= */
+
+.footer-brand img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1;
+}
+
+.footer-brand h3 {
+  font-size: 16px;
+  color: #fff;
+  margin: 8px 0;
+  line-height: 1.35;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  color: #c5bcb5;
+  max-width: 260px;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer-grid .socials a {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  flex: 0 0 38px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #65534b;
+  border-radius: 50%;
+  background: transparent;
+  color: #d6a15d;
+
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer !important;
+  pointer-events: auto !important;
+  position: relative;
+  z-index: 2;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.footer-grid .socials a svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  padding: 0;
+  color: currentColor;
+  stroke: currentColor;
+}
+
+.footer-grid .socials a:hover {
+  color: #fff;
+  background: #7e1738;
+  border-color: #7e1738;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 14px rgba(126, 23, 56, 0.25);
+}
+
+.footer-grid .socials a:focus-visible {
+  outline: 2px solid #55aaff;
+  outline-offset: 4px;
+}
+
+/* Prevent general footer link styles affecting icons */
+.footer-grid .socials a {
+  margin-bottom: 0;
+  line-height: 1;
+  overflow-wrap: normal;
+}
+
+.footer-grid .socials a svg {
+  margin-top: 0;
+}
+
+/* =========================================
+   FOOTER HEADINGS AND LINKS
+========================================= */
+
+.footer-grid h4 {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 5px 0 15px;
+}
+
+.footer-grid a,
+.footer-grid span {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  color: #d0c5bd;
+  font-size: 13px;
+  line-height: 1.65;
+  margin-bottom: 8px;
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.footer-grid a {
+  transition: color 0.2s ease;
+}
+
+.footer-grid a:hover {
+  color: #d6a15d;
+}
+
+.footer-grid a svg,
+.footer-grid span svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #d6a15d;
+}
+
+/* Restore exact social icon colors and alignment */
+.footer-grid .socials a {
+  color: #d6a15d;
+  margin: 0;
+}
+
+.footer-grid .socials a:hover {
+  color: #fff;
+}
+
+.footer-grid .socials a svg {
+  margin: 0;
+  color: currentColor;
+}
+
+/* =========================================
+   COPYRIGHT SECTION
+========================================= */
+
+.copyright {
+  position: relative;
+  border-top: 1px solid #493c37;
+  margin-top: 24px;
+  padding: 14px 0 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+
+  color: #c7bcb4;
+  font-size: 12px;
+  line-height: 1.45;
+}
+
+.copyright .footer-copy-left {
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 38%;
+  text-align: left;
+}
+
+.copyright .footer-tagline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  white-space: nowrap;
+  color: #b8a6a0;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.copyright .footer-tagline .footer-dot {
+  color: #7e1738;
+  padding: 0 4px;
+}
+
+/* Datagenix — right column, same row (brand turquoise) */
+.copyright .footer-credit,
+.copyright .datagenix-link {
+  --datagenix-turquoise: #2ee9b8;
+  --datagenix-turquoise-hover: #6bffda;
+
+  flex: 1 1 0;
+  min-width: 0;
+  max-width: 42%;
+  margin: 0 0 0 auto;
+  padding: 0;
+  text-align: right;
+
+  display: block;
+
+  color: var(--datagenix-turquoise) !important;
+  -webkit-text-fill-color: var(--datagenix-turquoise) !important;
+
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.45;
+  white-space: nowrap;
+  transition: color 0.25s ease;
+}
+
+.copyright .footer-credit a,
+.copyright .designed-by,
+.copyright .datagenix-link a {
+  display: inline;
+  color: var(--datagenix-turquoise) !important;
+  -webkit-text-fill-color: var(--datagenix-turquoise) !important;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+
+.copyright .datagenix-brand {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1.5px;
+}
+
+.copyright .footer-credit:hover,
+.copyright .footer-credit a:hover,
+.copyright .designed-by:hover,
+.copyright .datagenix-link:hover,
+.copyright .datagenix-link a:hover {
+  color: var(--datagenix-turquoise-hover) !important;
+  -webkit-text-fill-color: var(--datagenix-turquoise-hover) !important;
+}
+
+.copyright .footer-credit svg,
+.copyright .designed-by svg,
+.copyright .datagenix-link svg {
+  display: inline-block;
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  margin: 0;
+  color: currentColor;
+}
+
+/* =========================================
+   WHATSAPP FLOATING BUTTON
+========================================= */
+
+.wa {
+  position: fixed;
+  z-index: 1000;
+  right: 22px;
+  bottom: 22px;
+
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+  font-size: 26px;
+  line-height: 1;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  animation: wa-pulse 2.2s infinite;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.wa svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  color: currentColor;
+  stroke: currentColor;
+}
+
+.wa::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wa:hover {
+  background: #1eaf54;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@keyframes wa-pulse {
+  0%,
+  100% {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  }
+
+  50% {
+    box-shadow:
+      0 6px 20px rgba(0, 0, 0, 0.28),
+      0 0 0 5px rgba(37, 211, 102, 0.12);
+  }
+}
+
+/* =========================================
+   TABLET VIEW
+========================================= */
+
+@media (max-width: 850px) {
+  .footer-cta-inner {
+    min-height: auto;
+    display: block;
+    padding: 35px 0;
+  }
+
+  .footer-cta .primary-round {
+    margin-top: 18px;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .footer-main {
+    padding-top: 30px;
+  }
+
+  .copyright {
+    column-gap: 10px;
+    font-size: 11px;
+  }
+
+  .copyright .footer-credit,
+  .copyright .datagenix-link {
+    font-size: 11px;
+  }
+}
+
+/* =========================================
+   MOBILE VIEW
+========================================= */
+
+@media (max-width: 550px) {
+  .footer-cta-inner {
+    padding: 30px 0;
+  }
+
+  .footer-cta h2 {
+    font-size: 30px;
+  }
+
+  .footer-cta p {
+    font-size: 14px;
+  }
+
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 23px;
+  }
+
+  .footer-brand img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .footer-main {
+    padding: 26px 0 18px;
+  }
+
+  .socials {
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  .footer-grid .socials a {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+  }
+
+  .copyright {
+    margin-top: 20px;
+    padding: 12px 0 8px;
+    font-size: 9px;
+    gap: 8px;
+  }
+
+  .copyright .footer-copy-left {
+    max-width: 32%;
+  }
+
+  .copyright .footer-tagline {
+    font-size: 9px;
+    max-width: 36%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .copyright .footer-credit,
+  .copyright .datagenix-link {
+    max-width: 34%;
+    font-size: 9px;
+  }
+
+  /* WhatsApp stays separate from footer text */
+  .wa {
+    width: 46px;
+    height: 46px;
+    right: 15px;
+    bottom: 15px;
+    font-size: 24px;
+  }
+
+  .wa svg {
+    width: 23px;
+    height: 23px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 360px) {
+  .footer-grid {
+    gap: 20px;
+  }
+
+  .footer-grid .socials a {
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    flex-basis: 36px;
+  }
+
+  .copyright {
+    font-size: 11px;
+  }
+
+  .copyright .datagenix-link {
+    font-size: 11px;
+  }
+
+  .wa {
+    width: 44px;
+    height: 44px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .wa {
+    animation: none;
+  }
+
+  .socials a,
+  .footer-grid a,
+  .copyright .datagenix-link {
+    transition: none;
+  }
+}
