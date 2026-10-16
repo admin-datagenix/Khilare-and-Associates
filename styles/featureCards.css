@@ -1,0 +1,110 @@
+/* ==================================================
+   FEATURE CARDS COMPONENT
+   Used across Services (/expertise) and Approach (/approach)
+   Matches website typography: Fraunces serif + Inter body
+================================================== */
+
+.feature-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.feature-cards article {
+  background: #ffffff;
+  border: 1px solid #e8e0d5;
+  border-radius: 10px;
+  padding: 32px 28px;
+  min-height: 210px;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 18px rgba(16, 61, 59, 0.03);
+}
+
+.feature-cards article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #7e1738;
+  transition: width 0.35s ease;
+}
+
+.feature-cards article:hover {
+  transform: translateY(-6px);
+  border-color: rgba(126, 23, 56, 0.28);
+  box-shadow: 0 18px 40px rgba(16, 61, 59, 0.09);
+}
+
+.feature-cards article:hover::before {
+  width: 100%;
+}
+
+.feature-cards span {
+  font-family: var(--font-fraunces), Georgia, serif !important;
+  font-size: 22px;
+  font-weight: 700;
+  color: #d6a15d;
+  line-height: 1;
+  display: block;
+  margin-bottom: 14px;
+  letter-spacing: -0.02em;
+}
+
+.feature-cards h3 {
+  font-family: var(--font-fraunces), Georgia, serif !important;
+  font-size: clamp(20px, 1.8vw, 23px);
+  font-weight: 700;
+  color: #231b17 !important;
+  margin: 0 0 12px;
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+}
+
+.feature-cards p {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14.5px;
+  color: #5e524b;
+  line-height: 1.7;
+  margin: 0;
+  flex-grow: 1;
+  padding-bottom: 24px;
+}
+
+.feature-cards svg {
+  position: absolute;
+  right: 24px;
+  bottom: 24px;
+  font-size: 18px;
+  color: #a4968f;
+  transition: all 0.25s ease;
+}
+
+.feature-cards article:hover svg {
+  color: #d6a15d;
+  transform: translate(3px, -3px);
+}
+
+@media (max-width: 1024px) {
+  .feature-cards {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 680px) {
+  .feature-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .feature-cards article {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+}

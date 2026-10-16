@@ -1,0 +1,607 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap");
+
+/* =========================================
+   FOOTER CTA
+========================================= */
+
+.footer-cta {
+  background: #f0ece3;
+}
+
+.footer-cta-inner {
+  min-height: 160px;
+  padding: 26px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.footer-cta h2 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  font-size: clamp(30px, 3.5vw, 46px);
+  margin: 7px 0;
+  line-height: 1.15;
+  color: #231b17;
+  letter-spacing: -0.02em;
+}
+
+.footer-cta p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+/* =========================================
+   MAIN FOOTER
+========================================= */
+
+.footer-main {
+  background: #211b1a;
+  color: #e5ded7;
+  padding: 34px 0 16px;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.3fr 0.8fr 1.15fr 1.4fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* =========================================
+   BRAND LOGO
+========================================= */
+
+.footer-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0 !important;
+}
+
+.footer-brand img {
+  display: block;
+  width: 72px;
+  height: 72px;
+  object-fit: contain;
+  filter: none !important;
+  opacity: 1;
+}
+
+.footer-brand h3 {
+  font-size: 16px;
+  color: #fff;
+  margin: 8px 0;
+  line-height: 1.35;
+}
+
+.footer-brand .footer-description {
+  font-size: 13px;
+  color: #c5bcb5;
+  max-width: 260px;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =========================================
+   SOCIAL ICONS
+========================================= */
+
+.footer-grid .socials {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.footer-grid .socials a {
+  width: 38px;
+  height: 38px;
+  min-width: 38px;
+  flex: 0 0 38px;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #65534b;
+  border-radius: 50%;
+  background: transparent;
+  color: #d6a15d;
+
+  font-size: 15px;
+  line-height: 1;
+  text-decoration: none;
+
+  transition:
+    color 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.footer-grid .socials a svg {
+  display: block;
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  margin: 0;
+  padding: 0;
+  color: currentColor;
+}
+
+.footer-grid .socials a:hover {
+  color: #fff;
+  background: #7e1738;
+  border-color: #7e1738;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 14px rgba(126, 23, 56, 0.25);
+}
+
+.footer-grid .socials a:focus-visible {
+  outline: 2px solid #55aaff;
+  outline-offset: 4px;
+}
+
+/* =========================================
+   FOOTER HEADINGS AND LINKS
+========================================= */
+
+.footer-grid h4 {
+  color: #fff;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 5px 0 15px;
+}
+
+.footer-grid a,
+.footer-grid span {
+  overflow-wrap: anywhere;
+}
+
+.footer-grid .footer-links {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0;
+}
+
+.footer-grid .footer-links a,
+.footer-grid .contact-item {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+  color: #d0c5bd;
+  font-size: 13px;
+  line-height: 1.65;
+  margin-bottom: 8px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-grid .footer-links a:hover,
+.footer-grid .contact-item:hover {
+  color: #d6a15d;
+}
+
+.footer-grid .contact-item svg {
+  flex-shrink: 0;
+  margin-top: 3px;
+  color: #d6a15d;
+}
+
+.footer-grid .contact-item span {
+  min-width: 0;
+}
+
+/* =========================================
+   COPYRIGHT BAR — DESKTOP
+   Left: Copyright
+   Center: Tagline
+   Right: DataGenix credit
+========================================= */
+
+.copyright {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  border-top: 1px solid #493c37;
+  margin-top: 24px;
+  padding: 16px 0 4px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+  align-items: center;
+  column-gap: 20px;
+  row-gap: 10px;
+
+  color: #c7bcb4;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* Left side */
+
+.copyright .copyright-text {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: start;
+  text-align: left;
+  min-width: 0;
+  margin: 0;
+}
+
+/* Exact center */
+
+.copyright .footer-tagline {
+  grid-column: 2;
+  grid-row: 1;
+  justify-self: center;
+  text-align: center;
+  white-space: nowrap;
+  min-width: 0;
+  margin: 0;
+  color: #d7cbc2;
+}
+
+.copyright .footer-dot {
+  display: inline;
+  margin: 0 3px;
+  color: #d6a15d;
+}
+
+/* Right side: DataGenix */
+
+.copyright .footer-credit {
+  grid-column: 3;
+  grid-row: 1;
+  justify-self: end;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: 4px;
+
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+
+  color: #00bfff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.copyright .designed-by {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+
+  margin: 0;
+  padding: 0;
+
+  color: #00bfff;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: inherit;
+  text-decoration: none;
+  white-space: nowrap;
+
+  transition: color 0.25s ease;
+}
+
+.copyright .footer-credit:hover,
+.copyright .designed-by:hover {
+  color: #55ccff;
+}
+
+.copyright .designed-by svg {
+  display: block;
+  width: 13px;
+  height: 13px;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+/* =========================================
+   FLOATING WHATSAPP BUTTON
+========================================= */
+
+.wa {
+  position: fixed;
+  z-index: 1000;
+  right: 22px;
+  bottom: 40px;
+
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  background: #25d366;
+  color: #fff;
+
+  font-size: 26px;
+  line-height: 1;
+
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  animation: wa-pulse 2.2s infinite;
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.wa svg {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+}
+
+.wa::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border: 1px solid rgba(37, 211, 102, 0.4);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.wa:hover {
+  background: #1eaf54;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+@keyframes wa-pulse {
+  0%, 100% {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.28);
+  }
+
+  50% {
+    box-shadow:
+      0 6px 20px rgba(0, 0, 0, 0.28),
+      0 0 0 5px rgba(37, 211, 102, 0.12);
+  }
+}
+
+/* =========================================
+   TABLET VIEW
+========================================= */
+
+@media (max-width: 1000px) {
+  .footer-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+  }
+
+  .footer-main {
+    padding-top: 30px;
+  }
+
+  .copyright {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 12px;
+  }
+
+  .copyright .copyright-text {
+    grid-column: 1;
+    grid-row: 1;
+    justify-self: start;
+    text-align: left;
+  }
+
+  .copyright .footer-tagline {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+    text-align: right;
+  }
+
+  .copyright .footer-credit {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    justify-self: center;
+    justify-content: center;
+    text-align: center;
+  }
+}
+
+/* =========================================
+   SMALL TABLET AND MOBILE CTA
+========================================= */
+
+@media (max-width: 850px) {
+  .footer-cta-inner {
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 35px 0;
+  }
+
+  .footer-cta .primary-round {
+    margin-top: 0;
+  }
+}
+
+/* =========================================
+   MOBILE VIEW
+========================================= */
+
+@media (max-width: 550px) {
+  .footer-cta-inner {
+    padding: 30px 0;
+    gap: 18px;
+  }
+
+  .footer-cta h2 {
+    font-size: 30px;
+  }
+
+  .footer-cta p {
+    font-size: 14px;
+  }
+
+  .footer-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 23px;
+  }
+
+  .footer-brand img {
+    width: 64px;
+    height: 64px;
+  }
+
+  .footer-main {
+    padding: 26px 0 18px;
+  }
+
+  .footer-grid h4 {
+    margin-bottom: 12px;
+  }
+
+  .footer-grid .socials {
+    gap: 12px;
+    margin-top: 14px;
+  }
+
+  /* Stack the copyright details neatly */
+
+  .copyright {
+    grid-template-columns: minmax(0, 1fr);
+    justify-items: center;
+    text-align: center;
+    gap: 11px;
+    margin-top: 20px;
+    padding: 16px 0 10px;
+  }
+
+  .footer {
+    padding-bottom: 30px;
+  }
+
+  .copyright {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    margin-top: 22px !important;
+    padding: 16px 14px 10px !important;
+    font-size: 11.5px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+  }
+
+  .copyright .footer-tagline {
+    position: static !important;
+    transform: none !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #d7cbc2 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    order: 1;
+  }
+
+  .copyright .footer-copy-left,
+  .copyright .copyright-text {
+    max-width: 100% !important;
+    font-size: 11.5px !important;
+    color: #b8a6a0 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    order: 2;
+  }
+
+  .copyright .footer-credit,
+  .copyright .datagenix-link {
+    max-width: 100% !important;
+    font-size: 12px !important;
+    text-align: center !important;
+    margin: 2px auto 0 !important;
+    white-space: normal !important;
+    order: 3;
+  }
+
+  .wa {
+    width: 48px;
+    height: 48px;
+    right: 18px;
+    bottom: 42px;
+    font-size: 25px;
+    z-index: 9999;
+  }
+
+  .wa svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* =========================================
+   EXTRA SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+  .footer-grid {
+    gap: 20px;
+  }
+
+  .copyright {
+    font-size: 11px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  .copyright .footer-credit {
+    font-size: 11px;
+  }
+
+  .wa {
+    width: 44px;
+    height: 44px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION ACCESSIBILITY
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .wa {
+    animation: none;
+  }
+
+  .footer-grid a,
+  .copyright .designed-by {
+    transition: none;
+  }
+}

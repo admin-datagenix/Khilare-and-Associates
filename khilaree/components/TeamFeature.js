@@ -17,8 +17,12 @@ export default function TeamFeature() {
               RAVINDRA SHANKAR KHILARE - PAWAR
             </div>
             <div className="team-identity-role">
-              <span className="team-identity-dot"></span>
-              CHIEF PROMOTER • KHILARE & ASSOCIATES
+              <span className="role-part">
+                <span className="team-identity-dot"></span>
+                CHIEF PROMOTER
+              </span>
+              <span className="role-separator">•</span>
+              <span className="role-part">KHILARE & ASSOCIATES</span>
             </div>
           </div>
         </div>

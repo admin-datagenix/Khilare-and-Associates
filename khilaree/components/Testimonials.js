@@ -80,7 +80,6 @@ export default function Testimonials() {
                     ))}
                   </div>
                   <p>{r[3]}</p>
-                  <span className="read-more">Read more</span>
                 </motion.article>
               );
             })}

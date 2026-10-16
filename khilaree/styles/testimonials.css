@@ -122,12 +122,6 @@
   margin: 0;
 }
 
-.read-more {
-  display: block;
-  margin-top: 15px;
-  color: #8A817C;
-  font-size: 13px;
-}
 
 .review-arrow {
   width: 42px;
@@ -244,11 +238,11 @@
 @media (max-width: 600px) {
 
   .reviews-section {
-    padding: 75px 0;
+    padding: 38px 0 !important;
   }
 
   .reviews-head {
-    margin-bottom: 35px;
+    margin-bottom: 20px !important;
   }
 
   .reviews-slider {
@@ -257,7 +251,7 @@
   }
 
   .review-card {
-    min-height: 255px;
+    min-height: 190px !important;
     padding: 22px 18px;
   }
 

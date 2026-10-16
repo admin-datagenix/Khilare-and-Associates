@@ -82,13 +82,29 @@
   gap: 7px;
   font-size: 11.5px;
   font-weight: 700;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   color: var(--primary);
   background: rgba(90, 26, 40, 0.06);
   border: 1px solid rgba(90, 26, 40, 0.16);
-  padding: 4px 12px;
+  padding: 5px 14px;
   border-radius: 20px;
   text-transform: uppercase;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.role-part {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.role-separator {
+  display: inline-block;
+  font-size: 9px;
+  opacity: 0.55;
+  margin: 0 1px;
 }
 
 .team-identity-dot {
@@ -98,6 +114,7 @@
   background: var(--primary);
   display: inline-block;
   flex-shrink: 0;
+  vertical-align: middle;
 }
 
 /* Right Content */
@@ -173,21 +190,45 @@
 }
 
 @media(max-width:480px) {
+  .team-feature {
+    padding: 24px 0 !important;
+  }
   .team-box {
-    padding: 22px 16px;
+    padding: 18px 14px;
+    gap: 16px;
   }
   .team-leader-card {
     max-width: 100%;
   }
   .team-photo {
-    height: 250px;
+    height: 240px;
   }
   .team-identity-name {
-    font-size: 15px;
+    font-size: 14.5px;
   }
   .team-identity-role {
-    font-size: 10.5px;
-    padding: 3px 10px;
+    font-size: clamp(8.5px, 2.5vw, 10.5px);
+    padding: 4px 10px;
+    letter-spacing: 0.03em;
+    gap: 5px;
+    white-space: nowrap;
+  }
+  .team-identity-dot {
+    width: 4.5px;
+    height: 4.5px;
+  }
+}
+
+@media(max-width:340px) {
+  .team-identity-role {
+    white-space: normal;
+    flex-wrap: wrap;
+    padding: 5px 8px;
+    gap: 3px;
+    border-radius: 12px;
+  }
+  .role-separator {
+    display: none;
   }
 }
 

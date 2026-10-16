@@ -118,6 +118,32 @@ export const services = [
       sourceImage("1746780453243", "png"),
     ],
   },
+  {
+    title: "Residential Apartment Projects",
+    bullets: [
+      "Modern multi-storey residential schemes.",
+      "Smart 1, 2 & 3 BHK thoughtfully planned homes.",
+      "Quality construction with earthquake-resistant RCC.",
+      "Clear legal titles and RERA-compliant execution.",
+    ],
+    images: [
+      sourceImage("1751523113626"),
+      sourceImage("1748415889441"),
+    ],
+  },
+  {
+    title: "Site Supervision & Quality Consultancy",
+    bullets: [
+      "Rigorous quality auditing and material testing.",
+      "Strict site safety, timelines and budget monitoring.",
+      "Expert structural health and durability checks.",
+      "Complete technical oversight from foundation to handover.",
+    ],
+    images: [
+      sourceImage("1748262402692"),
+      sourceImage("1748262290603"),
+    ],
+  },
 ];
 
 export const projects = [

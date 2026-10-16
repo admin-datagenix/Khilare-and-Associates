@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
@@ -154,13 +154,7 @@ export function ServicesSection() {
               transition={{ duration: 0.3 }}
             >
               <div className="service-card-top">
-                <div className="service-title-wrap">
-                  <span className="service-num">
-                    {String(i + 1).padStart(2, "0")}
-                  </span>
-                  <h3>{s.title}</h3>
-                </div>
-                <FiArrowUpRight className="service-arrow" />
+                <h3>{s.title}</h3>
               </div>
               <div className="service-body">
                 <ul>
@@ -183,6 +177,22 @@ export function ServicesSection() {
 export function ProjectsSection() {
   const [active, setActive] = useState(0);
   const p = projects[active];
+  const tabsRef = useRef(null);
+
+  const handleSelect = (index) => {
+    setActive(index);
+    if (tabsRef.current) {
+      const buttons = tabsRef.current.querySelectorAll("button");
+      if (buttons[index]) {
+        buttons[index].scrollIntoView({
+          behavior: "smooth",
+          block: "nearest",
+          inline: "center",
+        });
+      }
+    }
+  };
+
   return (
     <section id="projects" className="company-section projects-section">
       <div className="container">
@@ -201,15 +211,32 @@ export function ProjectsSection() {
             premium interface.
           </p>
         </div>
-        <div className="project-tabs">
+        <div
+          ref={tabsRef}
+          className="project-tabs"
+          role="tablist"
+          aria-label="Project tabs"
+        >
           {projects.map((x, i) => (
             <button
               className={i === active ? "active" : ""}
               key={x.title}
-              onClick={() => setActive(i)}
+              onClick={() => handleSelect(i)}
+              type="button"
             >
               {x.title.replace(" — ", " / ")}
             </button>
+          ))}
+        </div>
+        <div className="project-tabs-dots" aria-hidden="true">
+          {projects.map((x, i) => (
+            <button
+              key={`dot-${x.title}`}
+              type="button"
+              className={`project-tab-dot ${i === active ? "active" : ""}`}
+              onClick={() => handleSelect(i)}
+              aria-label={`Go to project ${i + 1}`}
+            />
           ))}
         </div>
         <motion.div
@@ -244,9 +271,6 @@ export function GallerySection() {
     <section id="gallery" className="company-section gallery-section">
       <div className="container">
         <div className="gallery-section-head">
-          <Link href="/gallery" className="gallery-view-all-link">
-            View Gallery <FiArrowUpRight />
-          </Link>
           <div className="gallery-head-copy">
             <div className="eyebrow">Gallery</div>
             <h2 className="title">
@@ -258,6 +282,12 @@ export function GallerySection() {
               photography.
             </p>
           </div>
+        </div>
+        <div className="gallery-toolbar">
+          <Link href="/gallery" className="gallery-view-all-link">
+            <span>View Gallery</span>
+            <FiArrowUpRight />
+          </Link>
         </div>
         <div className="gallery-grid">
           {gallery.slice(0, 4).map((img, i) => (
@@ -304,19 +334,28 @@ export function EventsSection() {
           </div>
           <div className="event-visual-wrap">
             <div className="event-images">
-              {e.images.map((img, i) => (
-                <div
-                  key={img + i}
-                  className="event-img-card"
-                  onClick={() => setActiveImage(img)}
-                  title="Click to view full photo"
-                >
-                  <img src={img} alt={`${e.title} ${i + 1}`} />
-                  <span className="event-zoom-btn">
-                    <FiMaximize2 />
-                  </span>
-                </div>
-              ))}
+              {e.images.map((img, i) => {
+                const isLogo =
+                  img.includes("1748417498853") ||
+                  img.includes("1748416977091");
+                return (
+                  <div
+                    key={img + i}
+                    className={`event-img-card ${isLogo ? "is-logo-card" : ""}`}
+                    onClick={() => setActiveImage(img)}
+                    title="Click to view full photo"
+                  >
+                    <img
+                      src={img}
+                      alt={`${e.title} ${i + 1}`}
+                      className={isLogo ? "is-logo-img" : ""}
+                    />
+                    <span className="event-zoom-btn">
+                      <FiMaximize2 />
+                    </span>
+                  </div>
+                );
+              })}
             </div>
             <div className="event-controls-compact">
               <button

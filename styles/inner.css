@@ -1,0 +1,116 @@
+.inner-intro {
+  background: #fff;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+}
+.inner-intro .title span {
+  color: var(--maroon);
+}
+.dark-story {
+  background:
+    radial-gradient(ellipse at 85% 20%, rgba(229, 185, 103, 0.16) 0%, transparent 60%),
+    radial-gradient(ellipse at 15% 80%, rgba(126, 23, 56, 0.28) 0%, transparent 55%),
+    linear-gradient(135deg, #240710 0%, #3a0d1b 60%, #18060c 100%);
+  color: #ffffff;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid rgba(214, 161, 93, 0.18);
+  border-bottom: 1px solid rgba(214, 161, 93, 0.18);
+  text-align: center;
+}
+.dark-story .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.dark-story .eyebrow {
+  color: #e5b967;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.dark-story .eyebrow::before,
+.dark-story .eyebrow::after {
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: #e5b967;
+  display: inline-block;
+}
+.dark-story .title,
+.dark-story h2 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(38px, 4.8vw, 62px);
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  color: #ffffff !important;
+  margin: 12px auto 20px;
+  font-weight: 700;
+  text-align: center;
+}
+.dark-story .copy,
+.dark-story p {
+  font-family: var(--font-inter), sans-serif;
+  color: #f2e9e2 !important;
+  font-size: 18px;
+  line-height: 1.8;
+  max-width: 680px;
+  margin: 0 auto;
+  text-align: center;
+}
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+}
+.story-grid img {
+  width: 100%;
+  height: 430px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.story-grid h2 {
+  font-family: var(--font-fraunces), Georgia, serif;
+  font-size: clamp(36px, 4vw, 55px);
+  line-height: 1.08;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+.story-grid p {
+  color: #d1dedc;
+  line-height: 1.8;
+}
+.signature {
+  margin-top: 50px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  color: #ffffff;
+}
+.signature small {
+  display: block;
+  color: #e5b967;
+  font-size: 10px;
+  letter-spacing: 0.35em;
+  margin-top: 6px;
+}
+@media (max-width: 750px) {
+  .inner-intro,
+  .story-grid {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .story-grid h2 {
+    font-size: 42px;
+  }
+}

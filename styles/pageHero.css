@@ -1,0 +1,289 @@
+/* ==================================================
+   PAGE HERO COMPONENT
+   Cinematic architectural hero with deep teal overlay,
+   responsive Fraunces typography, and premium CTAs
+================================================== */
+
+.page-hero {
+  min-height: clamp(520px, 65vh, 680px);
+  padding-top: clamp(150px, 18vh, 200px);
+  padding-bottom: clamp(65px, 8vh, 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  color: #ffffff;
+  text-align: center;
+}
+
+.page-hero-bg {
+  position: absolute;
+  inset: -3%;
+  background-position: center;
+  background-size: cover;
+  filter: saturate(0.95) brightness(0.88);
+  will-change: transform;
+}
+
+.page-hero:not(.no-image):after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, rgba(36, 7, 16, 0.92) 0%, rgba(24, 18, 20, 0.78) 55%, rgba(61, 13, 28, 0.88) 100%),
+    linear-gradient(0deg, rgba(24, 6, 12, 0.82) 0%, transparent 65%);
+  pointer-events: none;
+}
+
+/* Hero without photo background - Architectural Cream & White */
+.page-hero.no-image {
+  background:
+    radial-gradient(ellipse at 80% 15%, rgba(229, 185, 103, 0.22) 0%, transparent 60%),
+    radial-gradient(ellipse at 15% 85%, rgba(126, 23, 56, 0.06) 0%, transparent 50%),
+    linear-gradient(180deg, #fbf9f5 0%, #f4ede3 100%);
+  border-bottom: 1px solid #e8dfd3;
+  min-height: clamp(430px, 55vh, 550px);
+  padding-top: clamp(140px, 18vh, 185px);
+  padding-bottom: clamp(60px, 7vh, 85px);
+  color: #231b17;
+}
+
+.page-hero.no-image:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(126, 23, 56, 0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(126, 23, 56, 0.035) 1px, transparent 1px);
+  background-size: 52px 52px;
+  pointer-events: none;
+  opacity: 0.85;
+}
+
+.page-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.page-hero-inner > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+}
+
+.page-hero .eyebrow {
+  color: #7e1738;
+  font-family: "Montserrat", sans-serif !important;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 8px;
+  text-align: center;
+}
+
+.page-hero .eyebrow::before,
+.page-hero .eyebrow::after {
+  content: "";
+  width: 24px;
+  height: 2px;
+  background: #7e1738;
+  display: inline-block;
+  border-radius: 1px;
+}
+
+.page-hero h1 {
+  font-family: "Montserrat", sans-serif !important;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  margin: 14px auto 18px;
+  font-weight: 700 !important;
+  max-width: 880px;
+  color: #231b17;
+  text-shadow: none;
+  text-align: center;
+}
+
+.page-hero p {
+  font-family: var(--font-inter), sans-serif;
+  max-width: 680px;
+  line-height: 1.75;
+  color: #554a43;
+  margin: 0 auto;
+  font-size: clamp(16px, 1.2vw, 18.5px);
+  font-weight: 450;
+  text-align: center;
+}
+
+/* Fallback for image-based hero */
+.page-hero:not(.no-image) h1 {
+  color: #ffffff;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+}
+
+.page-hero:not(.no-image) p {
+  color: #f2e9e2;
+}
+
+.page-hero:not(.no-image) .eyebrow {
+  color: #e5b967;
+}
+
+.page-hero:not(.no-image) .eyebrow::before,
+.page-hero:not(.no-image) .eyebrow::after {
+  background: #e5b967;
+}
+
+/* ==================================================
+   HERO CTAS
+================================================== */
+
+.hero-cta-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin: 32px auto 0;
+}
+
+.hero-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: #7e1738;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 22px rgba(126, 23, 56, 0.45);
+  cursor: pointer;
+  border: 1px solid rgba(229, 185, 103, 0.3);
+}
+
+.hero-cta-primary svg {
+  font-size: 15px;
+  transition: transform 0.25s ease;
+}
+
+.hero-cta-primary:hover {
+  background: #961d44;
+  border-color: #e5b967;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(126, 23, 56, 0.55);
+}
+
+.hero-cta-primary:hover svg {
+  transform: translate(2px, -2px);
+}
+
+.hero-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  color: #f7f4ee;
+  backdrop-filter: blur(8px);
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+}
+
+.hero-cta-secondary svg {
+  font-size: 15px;
+  transition: transform 0.25s ease;
+}
+
+.hero-cta-secondary:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: #e5b967;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.hero-cta-secondary:hover svg {
+  transform: translate(2px, -2px);
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+
+@media (max-width: 768px) {
+  .page-hero {
+    min-height: 480px;
+    padding-top: 115px;
+    padding-bottom: 50px;
+  }
+
+  .page-hero h1 {
+    font-size: clamp(32px, 7.5vw, 46px);
+    line-height: 1.1;
+  }
+
+  .page-hero p {
+    font-size: 15px;
+    line-height: 1.65;
+  }
+
+  .hero-cta-group {
+    margin-top: 24px;
+    gap: 12px;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .page-hero {
+    min-height: 440px;
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .hero-cta-group {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-cta-primary,
+  .hero-cta-secondary {
+    width: 100%;
+    max-width: 290px;
+    padding: 12px 20px;
+  }
+}
+

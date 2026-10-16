@@ -331,7 +331,7 @@
   position: fixed;
   z-index: 1000;
   right: 22px;
-  bottom: 22px;
+  bottom: 40px;
 
   width: 50px;
   height: 50px;
@@ -471,42 +471,67 @@
     flex-basis: 38px;
   }
 
-  .copyright {
-    margin-top: 20px;
-    padding: 12px 0 8px;
-    font-size: 9px;
-    gap: 8px;
+  .footer {
+    padding-bottom: 30px;
   }
 
-  .copyright .footer-copy-left {
-    max-width: 32%;
+  .copyright {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    gap: 10px !important;
+    margin-top: 22px !important;
+    padding: 16px 14px 10px !important;
+    font-size: 11.5px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
   }
 
   .copyright .footer-tagline {
-    font-size: 9px;
-    max-width: 36%;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    position: static !important;
+    transform: none !important;
+    text-align: center !important;
+    font-size: 12px !important;
+    font-weight: 600 !important;
+    color: #d7cbc2 !important;
+    max-width: 100% !important;
+    white-space: normal !important;
+    order: 1;
+  }
+
+  .copyright .footer-copy-left {
+    max-width: 100% !important;
+    font-size: 11.5px !important;
+    color: #b8a6a0 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    order: 2;
   }
 
   .copyright .footer-credit,
   .copyright .datagenix-link {
-    max-width: 34%;
-    font-size: 9px;
+    max-width: 100% !important;
+    font-size: 12px !important;
+    text-align: center !important;
+    margin: 2px auto 0 !important;
+    white-space: normal !important;
+    order: 3;
   }
 
-  /* WhatsApp stays separate from footer text */
+  /* WhatsApp button on mobile - clear of all text */
   .wa {
-    width: 46px;
-    height: 46px;
-    right: 15px;
-    bottom: 15px;
-    font-size: 24px;
+    width: 48px;
+    height: 48px;
+    right: 18px;
+    bottom: 42px;
+    font-size: 25px;
+    z-index: 9999;
   }
 
   .wa svg {
-    width: 23px;
-    height: 23px;
+    width: 25px;
+    height: 25px;
   }
 }
 

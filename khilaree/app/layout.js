@@ -2,6 +2,7 @@ import { Inter, Fraunces } from "next/font/google";
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import ScrollProgress from "../components/ScrollProgress";
+import FloatingWhatsApp from "../components/FloatingWhatsApp";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -34,6 +35,9 @@ export default function RootLayout({ children }) {
 
         {/* Page Content */}
         <main className="site-content">{children}</main>
+
+        {/* Floating WhatsApp Button on all pages */}
+        <FloatingWhatsApp />
       </body>
     </html>
   );

@@ -78,19 +78,34 @@ img {
   font-size: 17px;
 }
 .round-btn {
-  width: 54px;
-  height: 54px;
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  border: 1px solid currentColor;
-  display: inline-grid;
-  place-items: center;
-  transition: 0.35s;
-}
-.round-btn:hover {
   background: var(--primary);
   color: #fff;
-  border-color: var(--primary);
-  transform: rotate(-8deg) scale(1.06);
+  border: 1px solid var(--primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 14px rgba(126, 23, 56, 0.25);
+  flex-shrink: 0;
+}
+.round-btn svg {
+  width: 22px !important;
+  height: 22px !important;
+  stroke-width: 2.6px !important;
+  stroke: #ffffff !important;
+  color: #ffffff !important;
+  display: block;
+  transition: transform 0.3s ease;
+}
+.round-btn:hover {
+  background: #5e112a;
+  color: #fff;
+  border-color: #5e112a;
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(126, 23, 56, 0.35);
 }
 .primary-round {
   display: inline-flex;
@@ -107,7 +122,12 @@ img {
   border-color: var(--primary);
 }
 .primary-round:hover .round-btn {
-  transform: translateX(5px) rotate(-10deg);
+  transform: scale(1.08);
+  background: #5e112a;
+  box-shadow: 0 8px 22px rgba(126, 23, 56, 0.35);
+}
+.primary-round:hover .round-btn svg {
+  transform: translate(3px, -3px);
 }
 .site-content {
   padding-top: 0;

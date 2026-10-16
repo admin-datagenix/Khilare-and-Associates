@@ -170,17 +170,6 @@ export default function Footer() {
           </span>
         </div>
       </div>
-
-      {/* FLOATING WHATSAPP BUTTON */}
-      <a
-        className="wa"
-        href="https://wa.me/919225812831"
-        target="_blank"
-        rel="noopener noreferrer"
-        aria-label="Chat with Khilare & Associates on WhatsApp"
-      >
-        <FaWhatsapp />
-      </a>
     </footer>
   );
 }
